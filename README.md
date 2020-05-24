@@ -1,18 +1,18 @@
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
 
 ### 說明
 104到108年度學測偏好分數排名。<br>
-<p>令某年度申請入學有系所數目 N、學生數目 T，則假設對所有考生有一組偏好分數<span>\(a_1\)</span>~<span>\(a_n\)</span>，</p><p>使得某學生t選擇系所<span>\(d_1\)</span>的機率為 <span>\(P_{t_1}= \frac{ e^{a_{d_1}} }{ e^{a_{d_1}}+e^{a_{d_2}}+ \cdots +e^{a_{d_k}} }  \)</span>。</p>
-		<p>為了估計這組偏好分數，我們使用 <span>\( Cross Entropy Loss:\)</span><span>\( \max \sum_{i=1}^N y_i log P_{t_i} - \lambda \sum_{i=1}^N {a_i}^2 \)</span>。</p>
+<p>令某年度申請入學有系所數目 N、學生數目 T，則假設對所有考生有一組偏好分數<span>$$a_1$$</span>~<span>$$a_n$$</span>，</p><p>使得某學生t選擇系所<span>\(d_1\)</span>的機率為 <span>$$P_{t_1}= \frac{ e^{a_{d_1}} }{ e^{a_{d_1}}+e^{a_{d_2}}+ \cdots +e^{a_{d_k}} }  $$</span>。</p>
+		<p>為了估計這組偏好分數，我們使用 <span>$$ Cross Entropy Loss:$$</span><span>$$ \max \sum_{i=1}^N y_i log P_{t_i} - \lambda \sum_{i=1}^N {a_i}^2 $$</span>。</p>
 <p> 將申請入學各考生一階通過的系所作為考生可能的選擇集合，以考生最後錄取的科系為考生最後的選擇，據此資料用stochastic gradient descent (sgd) 演算法最小化Cross Entropy Loss，計算各年度的偏好分數。</p>
 <p>此分數不代表系所之間的優劣，而是考生的選擇及偏好。</p>
-		<p id='abt_explain2'>關於此模型可參考：</p>
+		<p>關於此模型可參考：</p>
 		<ul>
-			<li style="color:#4dac8c">
-				<a style="color:#4dac8c;font-size:1.2em" href="https://en.wikipedia.org/wiki/Softmax_function">Softmax function</a>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Softmax_function">Softmax function</a>
 			</li>
-			<li style="color:#4dac8c">
-				<a style="color:#4dac8c;font-size:1.2em" href="https://en.wikipedia.org/wiki/Cross_entropy">Cross entropy</a>
+			<li>
+				<a  href="https://en.wikipedia.org/wiki/Cross_entropy">Cross entropy</a>
 			</li>
 		</ul>
 
